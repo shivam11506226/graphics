@@ -1,0 +1,107 @@
+#include<GL/glut.h>
+#include<GL/gl.h>
+#include<GL/glu.h>
+void display()
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(1,0,1);
+	glBegin(GL_POLYGON);
+	glVertex2f(0.2,0.6);
+	glVertex2f(0.2,0.2);
+	glVertex2f(0.6,0.2);
+	glVertex2f(0.6,0.6);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_POLYGON);
+	glVertex2f(0.2,0.2);
+	glVertex2f(0.1,0);
+	glVertex2f(0.5,0);
+	glVertex2f(0.6,0.2);
+	glEnd();
+	glColor3f(0,1,0);
+	glBegin(GL_LINES);
+	glVertex2f(0.2,0.2);
+	glVertex2f(0.2,0.05);
+	glEnd();
+	glColor3f(0,1,0);
+	glBegin(GL_LINES);
+	glVertex2f(0.1,0);
+	glVertex2f(0.1,-0.2);
+	glEnd();
+	glColor3f(0,1,0);
+	glBegin(GL_LINES);
+	glVertex2f(0.5,0);
+	glVertex2f(0.5,-0.2);
+	glEnd();
+	glColor3f(0,1,0);
+	glBegin(GL_LINES);
+	glVertex2f(0.6,0.2);
+	glVertex2f(0.6,0);
+	glEnd();
+	glColor3f(1,0,1);
+	glBegin(GL_POLYGON);
+	glVertex2f(-0.7,0.6);
+	glVertex2f(-0.6,0.2);
+	glVertex2f(-0.2,0.2);
+	glVertex2f(-0.3,0.6);
+	glEnd();
+	glColor3f(0,0,1);
+	glBegin(GL_POLYGON);
+	glVertex2f(-0.7,0.6);
+	glVertex2f(-0.8,0.2);
+	glVertex2f(-0.6,0.2);
+	glEnd();
+	glColor3f(1,0,0);
+	glBegin(GL_POLYGON);
+	glVertex2f(-0.8,0.2);
+	glVertex2f(-0.8,-0.2);
+	glVertex2f(-0.6,-0.2);
+	glVertex2f(-0.6,0.2);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_POLYGON);
+	glVertex2f(-0.6,0.2);
+	glVertex2f(-0.6,-0.2);
+	glVertex2f(-0.2,-0.2);
+	glVertex2f(-0.2,0.2);
+	glEnd();
+	glColor3f(0,0,1);
+	glBegin(GL_POLYGON);
+	glVertex2f(-0.75,0.1);
+	glVertex2f(-0.75,-0.2);
+	glVertex2f(-0.65,-0.2);
+	glVertex2f(-0.65,0.1);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_LINES);
+	glVertex2f(-0.9,0.9);
+	glVertex2f(-0.9,-0.9);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_LINES);
+	glVertex2f(-0.9,-0.9);
+	glVertex2f(0.9,-0.9);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_LINES);
+	glVertex2f(0.9,-0.9);
+	glVertex2f(0.9,0.9);
+	glEnd();
+	glColor3f(1,1,1);
+	glBegin(GL_LINES);
+	glVertex2f(0.9,0.9);
+	glVertex2f(-0.9,0.9);
+	glEnd();
+	glFlush();
+}
+int main(int argc,char**argv)
+{
+	glutInit(&argc,argv);
+	glutInitDisplayMode(GLUT_RGB|GLUT_SINGLE);
+	glutInitWindowSize(500,500);
+	glutInitWindowPosition(0,0);
+	glutCreateWindow("Lab Evalution 1");
+	glutDisplayFunc(display);
+	glutMainLoop();
+	return 0;
+}
